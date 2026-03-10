@@ -139,7 +139,7 @@ const totals = inventory.reduce((acc, item) => {
   <div className="grid grid-cols-3 gap-y-4 gap-x-2 text-sm">
     <div className="flex flex-col items-center">
       <span className="text-gray-400">⚔️ 攻撃力</span>
-      <span className="font-bold text-white text-lg">+{totals.ad}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ad}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-purple-400">✨ 魔力</span>
