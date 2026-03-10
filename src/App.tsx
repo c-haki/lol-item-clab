@@ -22,6 +22,14 @@ const filterOptions = [
   { key: "mr", label: "魔法防御" },
   { key: "as", label: "攻撃速度" },
   { key: "ms", label: "移動速度" },
+  { key: "cl", label: "クールダウン短縮" },
+  { key: "te", label: "行動妨害耐性" },
+  { key: "ls", label: "ライフスティール" },
+  { key: "arp", label: "物理防御貫通" },
+  { key: "mrp", label: "魔法防御貫通" },
+  { key: "sh", label: "スキルヘイスト" },
+  { key: "mpr", label: "マナ自動回復" },
+  { key: "hpr", label: "体力自動回復" }
 ];
 
   // アプリが起動した時に一度だけ「公式データ」を取りに行く
@@ -80,7 +88,16 @@ useEffect(() => {
       as: s.PercentAttackSpeedMod ? s.PercentAttackSpeedMod * 100 : 0,
       ms: s.PercentMovementSpeedMod ? s.PercentMovementSpeedMod * 100 : 0,
       cr: s.FlatCritChanceMod ? s.FlatCritChanceMod * 100 : 0,
-      // スキルヘイストや貫通などはData Dragonの構造が特殊なので一旦0、必要なら後で追加
+      ls: s.PercentLifeStealMod ? s.PercentLifeStealMod * 100 : 0,
+      hpr: s.FlatHPRegenMod || 0,
+      mpr: s.FlatMPRegenMod || 0,
+      te: s.PercentTenacityMod ? s.PercentTenacityMod * 100 : 0,
+      // ※スキルヘイストや貫通は DataDragon の stats に直接数値が入っていないため、
+      // 基本は 0 ですが、受け皿として用意しておきます。
+      sh: 0, 
+      arp: 0,
+      mrp: 0,
+      cl: 0,
     }
   };
 })
@@ -110,20 +127,17 @@ useEffect(() => {
  // すべての合計ステータスを一括計算
 const totals = inventory.reduce((acc, item) => {
   if (item) {
-    acc.ad += item.stats.ad || 0;
-    acc.ap += item.stats.ap || 0;
-    acc.hp += item.stats.hp || 0;
-    acc.mp += item.stats.mp || 0;
-    acc.ar += item.stats.ar || 0;
-    acc.mr += item.stats.mr || 0;
-    acc.as += item.stats.as || 0;
-    acc.ms += item.stats.ms || 0;
-    acc.cr += item.stats.cr || 0;
+    Object.keys(acc).forEach(key => {
+      // @ts-ignore (型の警告を一旦無視して一括加算)
+      acc[key] += item.stats[key] || 0;
+    });
     acc.price += item.price || 0;
   }
   return acc;
-}, { ad: 0, ap: 0, hp: 0, mp: 0, ar: 0, mr: 0, as: 0, ms: 0, cr: 0, price: 0 });
-
+}, { 
+  ad: 0, ap: 0, hp: 0, mp: 0, ar: 0, mr: 0, as: 0, ms: 0, cr: 0, 
+  ls: 0, te: 0, hpr: 0, mpr: 0, sh: 0, arp: 0, mrp: 0, price: 0 
+});
 
   return (
     <div className="min-h-screen bg-slate-900 text-white p-8 flex flex-col items-center w-full">
