@@ -187,6 +187,34 @@ const totals = inventory.reduce((acc, item) => {
       <span className="text-red-400">🎯 会心率</span>
       <span className="font-black text-white text-4xl tracking-tighter">+{totals.cr}%</span>
     </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">🧪 ライフスティール</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.ls}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-teal-400">👢 行動妨害耐性</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.te}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">👒 魔法防御貫通</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.mrp}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">🔪 物理防御貫通</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.arp}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">⌛ スキルヘイスト</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.sh}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">💧 マナ自動回復</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.mpr}%</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-red-400">💛 体力自動回復</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.hpr}%</span>
+    </div>
     
     {/* 総額は一番下にドーンと表示 */}
     <div className="col-span-3 text-center text-yellow-400 mt-4 border-t border-slate-700 pt-3 font-bold text-xl">
