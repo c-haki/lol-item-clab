@@ -302,8 +302,8 @@ const totals = inventory.reduce((acc, item) => {
               className="bg-slate-800 p-2 rounded border border-slate-700 hover:border-yellow-500 hover:bg-slate-700 transition-all w-28 flex flex-col items-center gap-1 shrink-0 group"
             >
               <img src={item.icon} alt={item.name} className="w-12 h-12 rounded shadow-md group-hover:scale-110 transition-transform" />
-              <p className="text-[10px] font-bold text-yellow-500 text-center line-clamp-2 h-6 leading-tight">{item.name}</p>
-              <p className="text-[10px] text-gray-400 font-mono">{item.price} G</p>
+              <p className="text-[12px] font-bold text-yellow-500 text-center line-clamp-2 h-6 leading-tight">{item.name}</p>
+              <p className="text-[20px] text-gray-400 font-mono">{item.price} G</p>
             </button>
           ))}
       </div>
