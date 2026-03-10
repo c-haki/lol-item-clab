@@ -133,45 +133,45 @@ const totals = inventory.reduce((acc, item) => {
 
      {/* 1. 総合ステータス */}
 <div className="bg-slate-800 p-6 rounded-lg border-2 border-yellow-600 mb-8 w-full max-w-2xl shadow-lg">
-  <h2 className="text-xl font-bold text-center text-yellow-500 mb-4">総合ステータス</h2>
+  <h2 className="text-xl font-black text-center text-yellow-500 mb-4">総合ステータス</h2>
   
   {/* グリッドを 3 列に設定 */}
   <div className="grid grid-cols-3 gap-y-4 gap-x-2 text-sm">
     <div className="flex flex-col items-center">
       <span className="text-gray-400">⚔️ 攻撃力</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ad}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.ad}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-purple-400">✨ 魔力</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ap}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.ap}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-green-400">❤️ 体力</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.hp}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.hp}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-blue-400">💧 マナ</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.mp}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.mp}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-orange-400">🛡️ 物理防御</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ar}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.ar}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-teal-400">🔮 魔法防御</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.mr}</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.mr}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-yellow-200">🏹 攻撃速度</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.as}%</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.as}%</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-blue-200">👟 移動速度</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ms}%</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.ms}%</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-red-400">🎯 会心率</span>
-      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.cr}%</span>
+      <span className="font-black text-white text-4xl tracking-tighter">+{totals.cr}%</span>
     </div>
     
     {/* 総額は一番下にドーンと表示 */}
