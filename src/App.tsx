@@ -143,35 +143,35 @@ const totals = inventory.reduce((acc, item) => {
     </div>
     <div className="flex flex-col items-center">
       <span className="text-purple-400">✨ 魔力</span>
-      <span className="font-bold text-white text-lg">+{totals.ap}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ap}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-green-400">❤️ 体力</span>
-      <span className="font-bold text-white text-lg">+{totals.hp}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.hp}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-blue-400">💧 マナ</span>
-      <span className="font-bold text-white text-lg">+{totals.mp}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.mp}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-orange-400">🛡️ 物理防御</span>
-      <span className="font-bold text-white text-lg">+{totals.ar}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ar}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-teal-400">🔮 魔法防御</span>
-      <span className="font-bold text-white text-lg">+{totals.mr}</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.mr}</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-yellow-200">🏹 攻撃速度</span>
-      <span className="font-bold text-white text-lg">+{totals.as}%</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.as}%</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-blue-200">👟 移動速度</span>
-      <span className="font-bold text-white text-lg">+{totals.ms}%</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.ms}%</span>
     </div>
     <div className="flex flex-col items-center">
       <span className="text-red-400">🎯 会心率</span>
-      <span className="font-bold text-white text-lg">+{totals.cr}%</span>
+      <span className="font-bold text-white text-4xl tracking-tighter">+{totals.cr}%</span>
     </div>
     
     {/* 総額は一番下にドーンと表示 */}
