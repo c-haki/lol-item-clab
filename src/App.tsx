@@ -150,7 +150,7 @@ const totals = inventory.reduce((acc, item) => {
   <h2 className="text-xl font-black text-center text-yellow-500 mb-4">総合ステータス</h2>
   
   {/* グリッドを 3 列に設定 */}
-  <div className="grid grid-cols-3 gap-y-4 gap-x-2 text-sm">
+  <div className="grid grid-cols-4 gap-y-4 gap-x-2 text-sm">
     <div className="flex flex-col items-center">
       <span className="text-gray-400">⚔️ 攻撃力</span>
       <span className="font-black text-white text-4xl tracking-tighter">+{totals.ad}</span>
@@ -303,7 +303,7 @@ const totals = inventory.reduce((acc, item) => {
             >
               <img src={item.icon} alt={item.name} className="w-12 h-12 rounded shadow-md group-hover:scale-110 transition-transform" />
               <p className="text-[11px] font-bold text-yellow-600 text-center line-clamp-2 h-7 leading-tight">{item.name}</p>
-              <p className="text-[15px] text-yellow-500 font-mono">{item.price} G</p>
+              <p className="text-[18px] text-yellow-500 font-mono">{item.price} G</p>
             </button>
           ))}
       </div>
