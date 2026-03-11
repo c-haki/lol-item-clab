@@ -286,7 +286,7 @@ const totals = inventory.reduce((acc, item) => {
     </div>
 
     {/* 右側：アイテム一覧（ここを横いっぱいに広げる） */}
-    <div className="flex-grow h-[600px] overflow-y-auto p-4 bg-slate-900/50 rounded-lg shadow-inner border border-slate-800">
+    <div className="flex-grow h-[900px] overflow-y-auto p-4 bg-slate-900/50 rounded-lg shadow-inner border border-slate-800">
       <div className="flex flex-wrap gap-4 justify-start">
         {items
   .filter(item => {
